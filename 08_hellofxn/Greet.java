@@ -1,11 +1,11 @@
-/*
+//*
 Abdullah Faruque
 APCS
 HW08: Refactor Freshie Zero
 2021-09-30
 */
 
-/**
+//*
 DISCOVERIES
 Main function can call helper function. In this case, the main function calls greet.
 UNRESOLVED QUESTIONS
