@@ -1,6 +1,6 @@
 public class Greet {
 	public static void greet(String input){
-		System.out.printf("Why, hello there, %s. How do you do?", input);
+		System.out.printf("Why, hello there, %s. How do you do? \n", input);
 	}
 	public static void main(String[] args) {
 		greet("Kevin");
