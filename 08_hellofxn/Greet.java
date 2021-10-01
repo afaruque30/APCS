@@ -12,3 +12,6 @@ public class Greet {
 		}
 	}
 }
+/* 
+Discoveries-Main function can call helper function. In this case, the main function calls greet.
+Unresolved Questions- is there any other way to do this, and am I even doing it right.
