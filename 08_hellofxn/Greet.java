@@ -3,14 +3,9 @@ public class Greet {
 		System.out.printf("Why, hello there, %s. How do you do?", input);
 	}
 	public static void main(String[] args) {
-		int number=(int)(Math.random()*3.0);
-		if ( number == 0){
-			greet("Russel");
-		}else if( number==1){
-			greet("Kevin");
-		}else{
-			greet("joe");
-		}
+		greet("Kevin");
+		greet("Abdullah");
+		greet("Russel");
 	}
 }
 /* 
