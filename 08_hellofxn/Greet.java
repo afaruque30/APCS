@@ -3,10 +3,10 @@ public class Greet {
 		System.out.printf("Why, hello there, %s. How do you do?", input);
 	}
 	public static void main(String[] args) {
-		number=(int)(Math.random());
-		if (number == 0){
+		int number=(int)(Math.random());
+		if (int number == 0){
 			greet("Russel");
-		}else if(number==1){
+		}else if(int number==1){
 			greet("Kevin");
 		}else{
 			greet("joe");
