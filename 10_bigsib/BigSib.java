@@ -1,7 +1,7 @@
 /*
 ABdullah Faruque + Green Lantern
 APCS
-HW09: What Are BigSibs Good For?
+HW10: Refactor Big Sib One
 2021-10-01
 */
 public class BigSib {
