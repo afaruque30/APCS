@@ -2,7 +2,7 @@
 ABdullah Faruque + Green Lantern
 APCS
 HW10: Refactor Big Sib One
-2021-10-01
+2021-10-04
 */
 public class BigSib {
 	public static String greet(String input){
