@@ -6,7 +6,7 @@ HW10: Refactor Big Sib One
 */
 public class Greet {
 	public static void main(String[] args){
-		System.out.println(BigSib.greet("Russel") );
+	System.out.println(BigSib.greet("Russel") );
         System.out.println(BigSib.greet("Tasnim") );
         System.out.println(BigSib.greet("Abdullah") );
     }
