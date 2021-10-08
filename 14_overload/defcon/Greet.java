@@ -1,5 +1,5 @@
 /*
-ABdullah Faruque + Green Lantern
+ABdullah Faruque + Green Lantern, Jonathan + Phoenix, Oscar + Redhead
 APCS
 HW14: Customize Your Creation
 2021-10-07
