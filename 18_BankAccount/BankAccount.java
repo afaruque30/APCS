@@ -1,5 +1,5 @@
 public class BankAccount {
-	public static int lastID = 8128; 
+	public static int lastID = 8128;
 	public String name;
 	private String password;
 	private int PIN;
@@ -7,7 +7,7 @@ public class BankAccount {
 	private int bal;
 	public BankAccount(String pname, String ppassword, int pPIN, int pbal){
 		userID = BankAccount.lastID;
-		userID=(userID+ 1) % 10^9;
+		userID=(userID+ 1) % ((int) Math.pow(10,9));
 		BankAccount.lastID += 1;
 		name = pname;
 		password = ppassword;
@@ -78,10 +78,10 @@ public class BankAccount {
 			System.out.println("PIN was incorrect");
 		}
 	}
-	
-	
+
+
 	public static void main(String[] args){
-		BankAccount john = new BankAccount("John Doe", "s3cr3tpassw0rd", 1234, 100389091);
+		BankAccount john = new BankAccount("John Doe", "s3cr3tpassw0rd", 1234, 100000);
 		john.printInfo(5432);
 		john.printInfo(1234);
 		john.setName(1234, "Joe");
@@ -96,6 +96,6 @@ public class BankAccount {
 		john.printInfo(4321);
 		john.withdrawMoney(4321,6970);
 		john.printInfo(4321);
-		
+
 	}
-} 
+}
