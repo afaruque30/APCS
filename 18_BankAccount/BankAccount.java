@@ -1,3 +1,16 @@
+// Team Wires: Julia Kozak, Joshua Yagupsky, Abdullah Faruque
+// APCS
+// HW18 -- CPA-One
+// 2021-10-18
+
+/*
+DISCO: Integer.toString(<Integer>) can be used to print integers;
+       You can use if/else within an if/else statement;
+       \n creates a New line within print
+QCC:
+Team Wires' Latest and Greatest Q2 Response: We know java provides a default constructor because when we try to print the value of an instance variable before the value is set, there is a default printed response (ex. ints printed as 0, and Strings printed as "null")
+Team Wires' Latest and Greatest Q3 Response: We can try running System.out.println(John.toString()); which provides a string representation of an object. Since the code compiles and outputs the object as a string, we confirm that there is a toString method that can be used in every class, which we can overload if we desire.
+*/
 public class BankAccount {
 	public static int lastID = 8128;
 	public String name;
