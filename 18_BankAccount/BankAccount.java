@@ -1,4 +1,4 @@
-// Team Wires: Julia Kozak, Joshua Yagupsky, Abdullah Faruque
+// Team Wires: Abdullah Faruque, Julia Kozak, Joshua Yagupsky 
 // APCS
 // HW18 -- CPA-One
 // 2021-10-18
