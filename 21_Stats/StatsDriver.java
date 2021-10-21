@@ -1,4 +1,11 @@
-
+/* Abdullah Faruque, Joshua Yagupsky,  Julia Kozak (Team Wires)
+APCS
+HW#21 -- STAtisTically Speaking
+2021-10-20*/
+/*
+DISCO
+QCC
+*/
 public class StatsDriver {
   public static void main(String[] args){
     System.out.println(Stats.mean(15,15)); //Should be 15
