@@ -115,6 +115,7 @@ public class Coin {
   	value = 1.00;
   	return value;
   }
+  }
 
 
   /***
@@ -150,7 +151,7 @@ public class Coin {
 	  flipCtr+=1;
 	  return upFace;
   }
-
+  }
 
   /***
    * boolean equals(Coin) -- checks to see if 2 coins have same face up
