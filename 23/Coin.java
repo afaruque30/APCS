@@ -1,11 +1,12 @@
-// Abdullah Faruque, Julia Kozak, Joshua Yagupsky (Team Wires)
+// Abdullah Faruque, Russell Goychayev (Team Bozos)
 // APCS
-// HW21: STAtisTically Speaking...
-// 2021-10-20
+// HW23: What Does Equality Look Like?
+// 2021-10-23
+// time spent- 1.0 hours
 
 /*
-DISCO: instead of Math.sqrt(), one can use Math.pow(a,(1.0/2.0)) and for cube roots, you can do Math.pow(a,(1.0/3.0)).
-QCC: how would you not typecast for int geoMean... because Math.sqrt and Math.pow(a,(1.0/3.0)) would not return ints. 
+DISCO: math.random is quite nice for probability. 
+QCC:
 */
 
 
