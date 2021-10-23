@@ -29,6 +29,7 @@ public class Coin {
 
 
     public Coin() {
+        bias=0.5;
         flip();
     }
 
@@ -46,6 +47,7 @@ public class Coin {
     ***/
     public Coin(String s) {
         name = s;
+        bias=0.5;
         flip();
     }
 
@@ -57,6 +59,7 @@ public class Coin {
     ***/
     public Coin(String s, String nowFace) {
         name = s;
+        bias=0.5;
         upFace = nowFace;
     }
 
