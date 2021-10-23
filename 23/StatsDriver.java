@@ -1,23 +1,49 @@
-/* Abdullah Faruque, Joshua Yagupsky,  Julia Kozak (Team Wires)
-APCS
-HW#21 -- STAtisTically Speaking
-2021-10-20*/
-/*
-DISCO
-QCC
-*/
-public class StatsDriver {
-  public static void main(String[] args){
-    System.out.println(Stats.mean(15,15)); //Should be 15
-    System.out.println(Stats.mean(10,11)); //Should be 10
-    System.out.println(Stats.mean(1500000000,1500000000)); //Should be 1500000000
-    System.out.println(Stats.mean(10.0,11.0); //Should be 10.5
-    System.out.println(Stats.max(-2,2)); //Should be 2
-    System.out.println(Stats.max(-2147483648,2147483648)); //Should be the bigger one
-    System.out.println(Stats.max(10.0,11.0)); //Should be 11.0
-    System.out.println(Stats.geoMean(4,9)); //Should be 6
-    System.out.println(Stats.geoMean(4.0,9.0)); //Should be 6.0
-    System.out.println(Stats.geoMean(-1,1)); //Should give you some sort of error message, since you cannot take the geometric mean of a negative and a positive number
-    System.out.println(Stats.geoMean(-1.0,1.0)) //Should still give you an error since one is negative
-  }
-}
+/***
+    driver for class Coin
+    ~~~ SUGGESTED WORKFLOW: ~~~
+    1. Compile this file and run. Note anything notable.
+    2. Move the "TOP" line down, so that it is below the first statement.
+    (emacs: with cursor at beginning of TOP line, C-k C-k, DOWN, DOWN, C-y)
+    (your editor: ???)
+    3. Compile and run again.
+    4. Resolve errors one at a time until it works.
+    5. Repeat 2-4 until TOP meets BOTTOM.
+***/
+
+public class Driver {
+
+  public static void main( String[] args ) {
+
+    //build Objects from blueprint specified by class Coin
+
+
+    //test default constructor
+      Coin mine = new Coin();
+      //test 1st overloaded constructor
+      Coin yours = new Coin( "quarter" );
+      //test 2nd overloaded constructor
+      Coin wayne = new Coin( "dollar", "heads" );
+      //test toString() methods of each Coin
+      System.out.println("mine: " + mine);
+      System.out.println("yours: " + yours);
+      System.out.println("wayne: " + wayne);
+      //test flip() method
+      System.out.println("\nAfter flipping...");
+      yours.flip();
+      wayne.flip();
+      System.out.println("yours: " + yours);
+      System.out.println("wayne: " + wayne);
+      //test equals() method
+      if ( yours.equals(wayne) ) {
+        System.out.println( "Matchee matchee!" );
+      }
+      else {
+        System.out.println( "No match. Firestarter you can not be." );
+      }
+        /*===================TOP==========================
+
+      ====================BOTTOM======================*/
+
+  }//end main()
+
+}//end class
