@@ -13,7 +13,6 @@ public class Coin {
 
   //attributes aka instance vars
   	double value;
-	float Coin;
 	String upFace;
 	String name;
 	int flipCtr;
@@ -125,6 +124,8 @@ public class Coin {
   ***/
   public void reset( String s, double d ) {
   if ((s == "heads" || s == "tails" ) && (0.0 <= d <= 1.0)) {
+	  upFace=s;
+	  bias=d;
   }
 
 
@@ -138,7 +139,16 @@ public class Coin {
    * Returns "heads" or "tails"
    ***/
   public String flip() {
-
+	if (Math.random() > bias){
+		upFace="heads";
+		headsCtr+=1;
+	}
+	  else{
+	  	upFace="tails";
+	  	tailsCtr+=1;
+	  }
+	  flipCtr+=1;
+	  return upFace;
   }
 
 
@@ -149,7 +159,12 @@ public class Coin {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-
+	if (other != null){
+		return (other.getUpFace()==upFace);
+	}
+	  else{
+	  	return false;
+	  }
   }
 
 
@@ -159,7 +174,7 @@ public class Coin {
    * postcond: Return String comprised of name and current face
    ***/
   public String toString() {
-
+	return name + " " + upFace;
   }
 
 }//end class
