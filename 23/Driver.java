@@ -1,14 +1,13 @@
-/***
-    driver for class Coin
-    ~~~ SUGGESTED WORKFLOW: ~~~
-    1. Compile this file and run. Note anything notable.
-    2. Move the "TOP" line down, so that it is below the first statement.
-    (emacs: with cursor at beginning of TOP line, C-k C-k, DOWN, DOWN, C-y)
-    (your editor: ???)
-    3. Compile and run again.
-    4. Resolve errors one at a time until it works.
-    5. Repeat 2-4 until TOP meets BOTTOM.
-***/
+// Abdullah Faruque, Russell Goychayev (Team Bozos)
+// APCS
+// HW23: What Does Equality Look Like?
+// 2021-10-23
+// time spent- 1.0 hours
+
+/*
+DISCO: math.random is quite nice for probability. 
+QCC:
+*/
 
 public class Driver {
 
