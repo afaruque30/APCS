@@ -29,7 +29,7 @@ public class Coin {
 
 
     public Coin() {
-
+        name=null;
     }
 
 
