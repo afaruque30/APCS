@@ -119,7 +119,7 @@ public class Coin {
         postcond: Coin's attribs reset to starting vals
     ***/
     public void reset(String s, double d) {
-        if ((s == "heads" || s == "tails") && (0.0 <= d <= 1.0)) {
+        if ((s == "heads" || s == "tails") && (0.0 < d < 1.0)) {
             upFace = s;
             bias = d;
         }
