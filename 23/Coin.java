@@ -109,6 +109,9 @@ public class Coin {
         } else if (s == "dollar") {
             value = 1.00;
             return value;
+        } else {
+            value=0.01;
+            return value;//if input is not penny,dime,etc, set it to penny by default...
         }
     }
 
