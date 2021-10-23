@@ -29,7 +29,7 @@ public class Coin {
 
 
     public Coin() {
-        name=null;
+        flip();
     }
 
 
@@ -46,6 +46,7 @@ public class Coin {
     ***/
     public Coin(String s) {
         name = s;
+        flip();
     }
 
 
