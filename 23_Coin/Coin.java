@@ -13,13 +13,14 @@ QCC:
 public class Coin {
 
     //attributes aka instance vars
-    double value;
-    String upFace;
-    String name;
-    int flipCtr;
-    int tailsCtr;
-    int headsCtr;
-    double bias; //heads = 1, tails = 0;
+  private double value;
+  private String upFace;
+  private String name;
+  private int flipCtr;
+  private int headsCtr;
+  private int tailsCtr;
+  private double bias;
+ //heads = 1, tails = 0;
 
 
     /***
