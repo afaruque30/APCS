@@ -33,6 +33,6 @@ public static void bozos(int x, int y, int dob){
 	System.out.println("coin b headcount: " + b.getHeadsCtr());
 }
 public static void main(String[] args){
-	bozos(2,4,2004);
+	bozos(2000,2000,2005);
 }
 }
