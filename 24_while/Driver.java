@@ -3,6 +3,7 @@
 // HW24: Get It While You Can
 // 2021-10-25
 // time spent- 1.5 hours
+// POST-V0 MODS-- added counter + reset method..
 
 /*
 DISCO: while loops let you keep flipping till you meet the requirements. 
