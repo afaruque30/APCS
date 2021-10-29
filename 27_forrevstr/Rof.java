@@ -5,7 +5,7 @@
 // time spent- 1 hour
 
 /*
-DISCO: ... 
+DISCO: you can sorta replicate the splicing in python on java using s.substring(i,i+1). still prefer pythons method though. 
 QCC: ...
 */
 
