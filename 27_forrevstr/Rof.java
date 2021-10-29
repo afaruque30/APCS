@@ -34,7 +34,7 @@ public class Rof{
 	public static void main(String[] args){
 	    reverseF("1234");
 	    reverseF("stressed");
-		System.out.println(reverseR("1234"));
+	    System.out.println(reverseR("1234"));
 	    System.out.println(reverseR("stressed"));
 	}
 }
