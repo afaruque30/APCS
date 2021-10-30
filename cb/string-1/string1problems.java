@@ -1,3 +1,14 @@
+// Team solobozo: Abdullah Faruque
+// APCS
+// HW28: PPMP
+// 2021-10-29
+// time spent- 0.2 hour
+
+/*
+DISCO: you have to make each method static to test them out, even though static isn't present in the coding bat coding place thingy.
+QCC: ...
+*/
+
 public class string1problems{
 
 public static void main(String[] args){
