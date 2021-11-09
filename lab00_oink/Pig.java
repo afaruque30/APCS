@@ -1,22 +1,25 @@
-/***
- * Team
- * APCS
- * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
- * 2021-11-04
- * time spent: 1 hr
+import java.util.Scanner;
 
- * DISCO:
+/*
+ * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
+ * APCS
+ * L00 -- v0
+ * 2021-11-08
+ * time spent: 1 hr
  *
+ * DISCO:
+ * If the return type is boolean, you can return the boolean expression.
+ * How to have the scanner check for a next line and use that next line. 
  *
  * QCC:
  * Is the Scanner method implemented in Pig.java or a new class file?
- ***/
+ * How are we supposed to read in.words from the file directly without copying it into the command line?
+ */
 
 public class Pig
 {
     //Q: How does this initialization make your life easier?
-    //A: Since the variable, VOWELS, has already been initialized outside of the methods, you can
-    //just directly refer to the variable in the methods.
+    //A: Since the variable, VOWELS, has already been initialized outside of the methods, you can just directly refer to the variable in the methods.
     private static final String VOWELS = "aeiouyAEIOUY";
     private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String PUNCS = ".,:;!?";
@@ -42,8 +45,7 @@ public class Pig
       boolean isAVowel(String) -- tells whether a letter is a vowel
       precondition: letter.length() == 1
       =====================================*/
-    public static boolean isAVowel( String letter )
-    {
+    public static boolean isAVowel( String letter ) {
         return VOWELS.indexOf( letter ) != -1;
     }
 
@@ -53,7 +55,7 @@ public class Pig
       pre:  w != null
       post: countVowels("meatball") -> 3
       =====================================*/
-    public static int countVowels( String w ){
+    public static int countVowels( String w ) {
         return allVowels(w).length();
     }
 
@@ -83,13 +85,13 @@ public class Pig
         } return vowelStorage;
     }
 
-    /**
-     String firstVowel(String) -- returns first vowel in a String
-     pre:  w != null
-     post: firstVowel("") --> ""
-     firstVowel("zzz") --> ""
-     firstVowel("meatball") --> "e"
-     **/
+    /*
+     * String firstVowel(String) -- returns first vowel in a String
+     * pre:  w != null
+     * post: firstVowel("") --> ""
+     * firstVowel("zzz") --> ""
+     * firstVowel("meatball") --> "e"
+     */
     public static String firstVowel( String w ) {
 
         String ans = "";
@@ -101,12 +103,12 @@ public class Pig
         return ans;
     }
 
-    /**
-     boolean beginsWithVowel(String) -- tells whether a String begins with a vowel
-     pre:  w != null and w.length() > 0
-     post: beginsWithVowel("apple")  --> true
-     beginsWithVowel("strong") --> false
-     **/
+    /*
+     * boolean beginsWithVowel(String) -- tells whether a String begins with a vowel
+     * pre:  w != null and w.length() > 0
+     * post: beginsWithVowel("apple")  --> true
+     * beginsWithVowel("strong") --> false
+     */
     public static boolean beginsWithVowel( String w ) {
         return isAVowel( w.substring(0,1) );
     }
@@ -129,7 +131,7 @@ public class Pig
             isUpperCase("A") -> true
       =====================================*/
     public static boolean isUpperCase( String letter ) {
-        return CAPS.indexOf(letter)!=-1;
+        return CAPS.indexOf(letter) != -1;
     }
 
   /*=====================================
@@ -140,9 +142,10 @@ public class Pig
       =====================================*/
 
     public static boolean hasPunc( String w ) {
-        for(int i = 0; i<w.length();i++){
-            if (isPunc(w.substring(i,i+1))){
-                return true;
+        for (int i = 0; i<w.length();i++) {
+	    boolean test = isPunc(w.substring(i, i+1));
+            if (test) {
+                return test;
             }
         }
         return false;
@@ -158,13 +161,13 @@ public class Pig
         return isUpperCase(w.substring(0,1) );
     }
 
-    /**
-     String engToPig(String) -- converts an English word to Pig Latin
-     pre:  w.length() > 0
-     post: engToPig("apple")  --> "appleway"
-     engToPig("strong") --> "ongstray"
-     engToPig("java")   --> "avajay"
-     **/
+    /*
+     * String engToPig(String) -- converts an English word to Pig Latin
+     * pre:  w.length() > 0
+     * post: engToPig("apple")  --> "appleway"
+     * engToPig("strong") --> "ongstray"
+     * engToPig("java")   --> "avajay"
+     */
     public static String engToPig( String w ) {
 
         String ans = "";
@@ -172,7 +175,7 @@ public class Pig
         if ( beginsWithVowel(w) )
             ans = w + "way";
 
-        else {
+	else {
             int vPos = w.indexOf( firstVowel(w) );
             ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
         }
@@ -180,7 +183,13 @@ public class Pig
         return ans;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
+	    Scanner in = new Scanner(System.in);
+	    while (in.hasNext()) {
+		    System.out.println(engToPig(in.next()));
+	    }
+
 //        System.out.println(isPunc(".")); /* TRUE */
 //        System.out.println(isPunc("b")); /* FALSE */
 //
