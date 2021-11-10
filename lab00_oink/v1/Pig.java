@@ -2,27 +2,10 @@
  /*
  * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
  * APCS
- * L00 -- Etterbay Odincay Oughthray Ollaborationcay
+ * L00 -- v0
  * 2021-11-08
  * time spent: 1 hr
- 
- * class Pig
- * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
- *           9
- *     ,--.-'-,--.
- *     \  /-~-\  /
- *    / )' a a `( \
- *   ( (  ,---.  ) )
- *    \ `(_o_o_)' /
- *     \   `-'   /
- *      | |---| |
- *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
- ***/
-/*
+ *
  * DISCO:
  * If the return type is boolean, you can return the boolean expression.
  * How to have the scanner check for a next line and use that next line. 
