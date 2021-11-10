@@ -1,53 +1,31 @@
 /*
- * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
- * APCS
- * L00 -- Etterbay Odincay Oughthray Ollaborationcay
- * 2021-11-09
- * time spent: 1 hr
- 
- * class Pig
- * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
- *           9
- *     ,--.-'-,--.
- *     \  /-~-\  /
- *    / )' a a `( \
- *   ( (  ,---.  ) )
- *    \ `(_o_o_)' /
- *     \   `-'   /
- *      | |---| |
- *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
- ***/
-/*
-DISCO:
-0. Character.isUpperCase() is great for finding whether or not a character is upper case or not. Was important for dealing with words that begin with capital
-letters in this version. 
-QCC:
-0. After your first input, you get your output on the next line. However, when putting in your next input, its on the same line as your previous output.
-Why, and how can we change that?
-HOW WE UTILIZED SCANNER DEMO (v3):
-Used the while loop and creation of a new scanner, sc, but used nextLine() instead of next().
-We did the following: 
-0. create a new scanner
-1. use a while loop with (in.hasNext())
-2. and plugged inputs into the existing code
-3. printed it out
-WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
-After it gets to the last word, the second next() call tells Java to move the cursor to the next
-line, but there isn't a next line.
-when the scanner gets to the last word, the NEXT next() call wants java to move the cursor to the next line, but the problem
-is that there is no next line. 
-NEW IN:
-fixed puncuations for last word, and made words with capital letters work. 
+* Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
+* APCS
+* L00 -- Etterbay Odincay Oughthray Ollaborationcay
+* 2021-11-09
+* time spent: 1 hr
+* 
+* DISCO:
+* 0. Character.isUpperCase() is great for finding whether or not a character is upper case or not. Was important for dealing with words that begin with capital
+* letters in this version. 
+* 
+* QCC:
+* 1. After your first input, you get your output on the next line. However, when putting in your next input, its on the same line as your previous output.
+* Why, and how can we change that?
+* 
+* WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
+* After it gets to the last word, the second next() call tells Java to move the cursor to the next
+* line, but there isn't a next line.
+* when the scanner gets to the last word, the NEXT next() call wants java to move the cursor to the next line, but the problem
+* is that there is no next line. 
+* 
+* NEW IN v3:
+* fixed puncuations for last word, and made words with capital letters work. 
 */
 
 import java.util.Scanner;
 
-public class Pig
-{
+public class Pig {
 private static final String VOWELS = "aeiouAEIOU";
 	private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final String PUNCS = ".,:;!?";
@@ -104,70 +82,39 @@ private static final String VOWELS = "aeiouAEIOU";
 		return false;
         }
 	
-
-       public static boolean beginsWithUpper( String w ) {
+	public static boolean beginsWithUpper( String w ) {
         return Character.isUpperCase(w.charAt(0) );
     }
-	
-	
-	
-       public static String engToPig(String w) {
 
+	
+    public static String engToPig(String w) {
     String ans = "";
-    String ansC = "";
+    String ansCap = "";
+    String puncHere = "";
+
+    if (hasPunc(w)) {
+    puncHere = w.substring(w.length()-1);
+    w=w.substring(0,w.length()-1);
+   }
 
     if (beginsWithVowel(w) || ((w.substring(0, 1).equals("y") || w.substring(0, 1).equals("Y")) && w.substring(1, 2).indexOf(VOWELS) != -1))
         ans = w + "way";
-    /* fly returns flyway, but its supposed to return 
-               yflay, style returns styleway instead of ylestay*/
-
     else {
         int vPos = w.indexOf(firstVowel(w));
         ans = w.substring(vPos) + w.substring(0, vPos) + "ay";
     }
     if (beginsWithUpper(w)) {
-        ansC = (ans.substring(0, 1).toUpperCase() + (ans.substring(1)).toLowerCase());
-        return ansC + " ";
+        ansCap = (ans.substring(0, 1).toUpperCase() + (ans.substring(1)).toLowerCase());
+        return ansCap + puncHere + " ";
     }
-    return ans + " ";
-}
+    return ans + puncHere + " ";
+	}
 
     public static void main(String[] args) {
-
 	    Scanner in = new Scanner(System.in);
-	    while (in.hasNext()) {
+	    while (in.hasNextLine()) {
 		    System.out.print(engToPig(in.next()));
 	    }
-   
-//        System.out.println(isPunc(".")); /* TRUE */
-//        System.out.println(isPunc("b")); /* FALSE */
-//
-//        System.out.println(isUpperCase("a"));/* FALSE */
-//        System.out.println(isUpperCase("A")); /* TRUE */
-//
-//        System.out.println(hasPunc("cat.")); /* TRUE */
-//        System.out.println(hasPunc("cat"));/* FALSE */
-//
-//        System.out.println(beginsWithUpper("Apple")); /* TRUE */
-//        System.out.println(beginsWithUpper("apple"));/* FALSE */
-//
-//        System.out.println(hasA("cat", "p") + "...should be false");
-//        System.out.println(hasA("applesauce scruffy krrish", "p") + "...should be true");
-//
-//        System.out.println(isAVowel("a") + "...should be true");
-//        System.out.println(isAVowel("p") + "...should be false");
-//
-//        System.out.println(countVowels("meatball") + "...should be 3");
-//        System.out.println(countVowels("many vowels here") + "...should be 5");
-//
-//        System.out.println(hasAVowel("meatball") + "...should be true");
-//        System.out.println(hasAVowel("bcd") + "...should be false");
-//
-//        System.out.println(allVowels("meatball") + "...should be eaa");
-//        System.out.println(allVowels("PIG LATIN") + "...should be IAI");
-
-        System.out.println(engToPig("cat") + "...should be atcay");
-        System.out.println(engToPig("apple") + "...should be appleway");
-    }//end main()
+    }//end main()version
 
 }//end class Pig
