@@ -1,36 +1,21 @@
 /*
- * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
+ * Team Frog Hats -- Kevin Cheng, Ziying Jian, Abdullah Faruque
  * APCS
- * L00 -- Etterbay Odincay Oughthray Ollaborationcay
+ * L00 -- Etterbay Odingcay Oughthray Ollaborationcay
  * 2021-11-09
- * time spent: 0.3 hr
- 
- * class Pig
- * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
- *           9
- *     ,--.-'-,--.
- *     \  /-~-\  /
- *    / )' a a `( \
- *   ( (  ,---.  ) )
- *    \ `(_o_o_)' /
- *     \   `-'   /
- *      | |---| |
- *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
- ***/
-/*
-* DISCO:
- * One basic framework for separating Y into vowel and consonant
+ * Time spent: .3 hours
+ *
+ * DISCO:
+ * One way to test to see if Y is a vowel or consonant in a given word
  *
  * QCC:
  * Where is the best location for this separation to occur? It doesn't work if Y is not the first letter in this case
  * What methods are there to allow for the capitalization of certain letters in a string?
-* NEW IN v2:
-* One edit to an if statement that Y to be separated into either vowel or consonant only if it's the first letter in a word.
-*/
+ * 
+ * NEW IN v2:
+ * One edit to an if statement that Y to be separated into either vowel or consonant only if it's the first letter in a word.
+ * Implemented the Scanner class and ran the plaintext file in.words 
+ */
 
 import java.util.Scanner;
 
