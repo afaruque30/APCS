@@ -1,47 +1,26 @@
 /*
- * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
- * APCS
- * L00 -- Etterbay Odincay Oughthray Ollaborationcay
- * 2021-11-09
- * time spent: 1 hr
- 
- * class Pig
- * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
- *           9
- *     ,--.-'-,--.
- *     \  /-~-\  /
- *    / )' a a `( \
- *   ( (  ,---.  ) )
- *    \ `(_o_o_)' /
- *     \   `-'   /
- *      | |---| |
- *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
- ***/
-/*
-DISCO:
-0. Character.isUpperCase() is great for finding whether or not a character is upper case or not. Was important for dealing with words that begin with capital
-letters in this version. 
-QCC:
-0. After your first input, you get your output on the next line. However, when putting in your next input, its on the same line as your previous output.
-Why, and how can we change that?
-HOW WE UTILIZED SCANNER DEMO (v3):
-Used the while loop and creation of a new scanner, sc, but used nextLine() instead of next().
-We did the following: 
-0. create a new scanner
-1. use a while loop with (in.hasNext())
-2. and plugged inputs into the existing code
-3. printed it out
-WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
-After it gets to the last word, the second next() call tells Java to move the cursor to the next
-line, but there isn't a next line.
-when the scanner gets to the last word, the NEXT next() call wants java to move the cursor to the next line, but the problem
-is that there is no next line. 
-NEW IN:
-fixed puncuations for last word, and made words with capital letters work. 
+* Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
+* APCS
+* L00 -- Etterbay Odincay Oughthray Ollaborationcay
+* 2021-11-09
+* time spent: 1 hr
+* 
+* DISCO:
+* 0. Character.isUpperCase() is great for finding whether or not a character is upper case or not. Was important for dealing with words that begin with capital
+* letters in this version. 
+* 
+* QCC:
+* 1. After your first input, you get your output on the next line. However, when putting in your next input, its on the same line as your previous output.
+* Why, and how can we change that?
+* 
+* WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
+* After it gets to the last word, the second next() call tells Java to move the cursor to the next
+* line, but there isn't a next line.
+* when the scanner gets to the last word, the NEXT next() call wants java to move the cursor to the next line, but the problem
+* is that there is no next line. 
+* 
+* NEW IN v3:
+* fixed puncuations for last word, and made words with capital letters work. 
 */
 
 
