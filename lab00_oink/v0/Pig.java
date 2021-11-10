@@ -1,34 +1,21 @@
 /***
- * Team Wires: Julia Kozak, Joshua Yagupsky, Abdullah Faruque
+ * Team Frog Hats -- Ziying Jian, Abdullah Farque, Kevin Cheng 
  * APCS
- * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
+ * L00 - v0
  * 2021-11-04
  * time spent: 1 hr
- * class Pig
- * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
- *           9
- *     ,--.-'-,--.
- *     \  /-~-\  /
- *    / )' a a `( \
- *   ( (  ,---.  ) )
- *    \ `(_o_o_)' /
- *     \   `-'   /
- *      | |---| |
- *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
- ***/
-/*
  * DISCO:
- * .equals works when both sides are strings, best used when both are strings
+ * If the return type is boolean, you can return the boolean expression.
+ * How to have the scanner check for a next line and use that next line. 
  *
  * QCC:
  * Is the Scanner method implemented in Pig.java or a new class file?
- * NEW IN v0:
- * filled in skeleton for the methods in the barebone pig class. 
- ***/
+ * How are we supposed to read in.words from the file directly without copying it into the command 
+ *
+ * NEW IN:
+ * Compiled library lab00 skeleton and hw_31 homework
+ * Tests multiple helper methods and translator method
+***/
 
 public class Pig
 {
