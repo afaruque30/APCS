@@ -1,7 +1,7 @@
 /*
  * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
  * APCS
- * L00 -- latest working version
+ * L00 -- v2
  * 2021-11-09
  * time spent: 1 hr
  *
