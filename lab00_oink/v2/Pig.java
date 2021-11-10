@@ -1,18 +1,36 @@
 /*
  * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
  * APCS
- * L00 -- v3
+ * L00 -- Etterbay Odincay Oughthray Ollaborationcay
  * 2021-11-09
- * time spent: 1 hr
- *
- * DISCO:
- * If the return type is boolean, you can return the boolean expression.
- * How to have the scanner check for a next line and use that next line. 
+ * time spent: 0.3 hr
+ 
+ * class Pig
+ * a Pig Latin translator
+ * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
+ *           9
+ *     ,--.-'-,--.
+ *     \  /-~-\  /
+ *    / )' a a `( \
+ *   ( (  ,---.  ) )
+ *    \ `(_o_o_)' /
+ *     \   `-'   /
+ *      | |---| |
+ *      [_]   [_]
+ *      PROTIP: Make this class compilable first,
+ *      then develop and test one method at a time.
+ *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
+ ***/
+/*
+* DISCO:
+ * One basic framework for separating Y into vowel and consonant
  *
  * QCC:
- * Is the Scanner method implemented in Pig.java or a new class file?
- * How are we supposed to read in.words from the file directly without copying it into the command line?
- */
+ * Where is the best location for this separation to occur? It doesn't work if Y is not the first letter in this case
+ * What methods are there to allow for the capitalization of certain letters in a string?
+* NEW IN v2:
+* One edit to an if statement that Y to be separated into either vowel or consonant only if it's the first letter in a word.
+*/
 
 import java.util.Scanner;
 
