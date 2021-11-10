@@ -1,12 +1,28 @@
-import java.util.Scanner;
 
-/*
+ /*
  * Team Frog Hats -- Ziying Jian, Abdullah Faruque, Kevin Cheng
  * APCS
- * L00 -- v0
- * 2021-11-08
+ * L00 -- Etterbay Odincay Oughthray Ollaborationcay
+ * 2021-11-09
  * time spent: 1 hr
- *
+ 
+ * class Pig
+ * a Pig Latin translator
+ * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
+ *           9
+ *     ,--.-'-,--.
+ *     \  /-~-\  /
+ *    / )' a a `( \
+ *   ( (  ,---.  ) )
+ *    \ `(_o_o_)' /
+ *     \   `-'   /
+ *      | |---| |
+ *      [_]   [_]
+ *      PROTIP: Make this class compilable first,
+ *      then develop and test one method at a time.
+ *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
+ ***/
+/*
  * DISCO:
  * If the return type is boolean, you can return the boolean expression.
  * How to have the scanner check for a next line and use that next line. 
@@ -14,8 +30,19 @@ import java.util.Scanner;
  * QCC:
  * Is the Scanner method implemented in Pig.java or a new class file?
  * How are we supposed to read in.words from the file directly without copying it into the command line?
+ * 
+ * HOW WE UTILIZED SCANNER DEMO (v1)
+ * If the program is capable of reading another line of text from the command line,
+ * while (in.hasNext())
+ * Then the program will print the text converted into pig latin.
+ * System.out.println(engToPig(in.next()))
+ * 
+ * NEW IN V1:
+ * A rudimentary pig latin translator that takes no special scenarios into account.
+ * Input from the command line.
  */
 
+import java.util.Scanner;
 public class Pig
 {
     //Q: How does this initialization make your life easier?
