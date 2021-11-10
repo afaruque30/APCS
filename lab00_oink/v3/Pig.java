@@ -16,7 +16,7 @@
 
 import java.util.Scanner;
 
-public class temp
+public class Pig
 {
 private static final String VOWELS = "aeiouAEIOU";
 	private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
