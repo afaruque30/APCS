@@ -1,7 +1,7 @@
 /*
 * Team Green -- Abdullah Faruque, Neil Lin, Russell Goychayev 
 * APCS
-* HW35: A Pirate's Life for Me
+* HW35: Extract, Simplify
 * 2021-11-12
 * time spent: 1 hr
 
