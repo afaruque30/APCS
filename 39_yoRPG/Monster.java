@@ -14,7 +14,7 @@ public class Monster{
 	}
 		
 	public int attack(Protagonist p){
-		if (defense) {
+		if (p.getDefense()) {
 		p.health -= damage-10;
 		return damage-10;
 		}
