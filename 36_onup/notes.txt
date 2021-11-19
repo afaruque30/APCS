@@ -1,0 +1,57 @@
+/*
+* Solodolo-- Abdullah Faruque
+* APCS
+* HW36: All Quacked Up
+* 2021-11-18
+* time spent: 0.5 hours
+
+* DISC- 
+* QCC- 
+*/
+
+-Compile time errors are syntax errors
+-run time errors are errors during running the program
+-logic errors involve logic, and when the program incorrectly executes things. 
+
+D.1 compile time errors
+-can be avoided through the practice of good syntax
+-When dealing with errors, it is best to start from the first error, as it may solve the rest of the errors. 
+-it is important to find the location of the error, but the error message may not always show the true culprit
+ of such error.
+-check for normal syntax things like uppercase and lowercase letters, brackets and parentheses, semicolons, 
+and proper usage of quotations. 
+-be aware of typecasting, do it when necessary.
+-if program does not compile after above methods, gritty methods must be used...
+-create a dummy prgram and get rid off a good chunk of the code. compile and see if any error messages show up
+-if none show up, the part you got rid off clearly has an error. If not, keep slicing your code. 
+-this is called DEBUGGING BY BISECTION
+-often doing what the compiler tells you to do gets you no where since it's so obscure and maybe incorrect. 
+
+D.2 Run-Time Errors
+-when a program hangs, its stuck in an infinite loop, usually from recursion. 
+-a good way to find the source of problem is to use print statements before and after the loop. 
+-StackOverflow errors are what show up when an infinite recursion is occuring. 
+- too many print statements can clog up your view, and make it harder to find the source of error.
+-simplify your code!
+
+D.3 Logic Errors
+-often hard to find because the compiler does not tell you they're there.
+-tis best to visualize what your code SHOULD do on a kts to determine if your program is doing the right thing.
+-if errors persist, use a visualizer to see what is causing the mishap.
+-long lines of code can get the job done, but are not nice to look at, making it harder to debug when errors show
+up. 
+-break it up, it helps
+-use parentheses, it helps with math operations, cus somethings may be done first with out you realizing. 
+-use variables, not only does it make your code easier to look at, it makes the return line short.
+-print prints on the current line. println prints on the next line. 
+
+-if your really stuck...
+-curse your heart out
+-or take a walk and cope
+
+-get others to look at your program, (egoless programming!?!?!)
+-consult dr.duck
+
+-Upon being victorious after a successful bug defeat, take a moment to understand what you just defeated.
+-be like your immune system, prevent the same errors from coming up again.
+
