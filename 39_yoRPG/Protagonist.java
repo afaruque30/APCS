@@ -1,23 +1,23 @@
 public class Protagonist{
 	private String name;
-	private int health;
-	private int damage;
-	private boolean defense;
+	public int health = 1;
+	public int damage;
+	public boolean defense;
 	
 	
 	public Protagonist(String name){
 		this.name = name;
 	}
-	public static boolean isAlive(){
+	public boolean isAlive(){
 	return (health>0);
 	}
 	
-	public static void specialize(){
+	public  void specialize(){
 	damage=20;
 	health= 100;
 	defense=false;
 	}
-	public static void normalize(){
+	public  void normalize(){
 	damage=10;
 	health=100;
 	defense=true;

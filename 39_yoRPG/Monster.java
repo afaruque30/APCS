@@ -1,7 +1,7 @@
 public class Monster{
 
-	private int health;
-	private int damage;
+	public int health = 50;
+	public int damage;
 	
 	
 	public Monster(){
@@ -9,10 +9,14 @@ public class Monster{
 	damage=20;
 	}
 	
-	public static boolean isAlive(){
+	public  boolean isAlive(){
 	return (health>0);
 	}
-		
+
+	public int getHealth(){
+	return health;
+	}
+			
 	public int attack(Protagonist p){
 		if (p.getDefense()) {
 		p.health -= damage-10;
@@ -21,8 +25,5 @@ public class Monster{
 		else {p.health -= damage;
 		return damage;
 		}
-	}
-	public String getName(){
-		return name;
 	}
 }
