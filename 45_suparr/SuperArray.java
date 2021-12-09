@@ -5,7 +5,7 @@
  * 2021-12-8
  * time spent - 0.5 hours
  *
- * Disco- ...
+ * Disco- Interfaces makes sure that each class that implements it has the required methods.
  *
  * QCC- ...
  *
