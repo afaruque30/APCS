@@ -1,9 +1,14 @@
 /**
 // MumbleCore - Abdullah Faruque, Neil Lin, Russell Goychayev
 // APCS pd08
-// HW48_search
+// HW48- Halving the Halves
 // 2021-12-15
 // time spent: 0.2 hrs
+   class BinSearch
+   Binary search on array of Comparables
+**/
+
+/**
    class BinSearch
    Binary search on array of Comparables
 **/
@@ -26,19 +31,22 @@ public class BinSearch
   }
 
 
-  public static int binSearchRec( Comparable[] a, Comparable target, int lo, int hi ) {
+  public static int binSearchRec( Comparable[] a, Comparable target, int lo, int hi )
+  {
+
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
-    if(lo==hi && a[m].compareTo(target)!=0) {
-      return tPos;
+    int comparison = a[m].compareTo( target );
+	  
+    if ( lo != hi ) {
+      if ( comparison == 0 )
+        return m;
+      else if ( comparison < 0 )
+        binSearchRec( a, target, m + 1, hi );
+      else if ( comparison > 0 )
+        binSearchRec( a, target, lo, m - 1 );
     }
-    if(a[m].compareTo(target) == 0) {
-      return m;
-    } else if(a[m].compareTo(target) < 0) {
-      return binSearchRec(a, target, m, hi);
-    } else if(a[m].compareTo(target) > 0) {
-      return binSearchRec(a, target, lo, m);
-    }
+	  
     return tPos;
   }//end binSearchRec
 
@@ -49,16 +57,20 @@ public class BinSearch
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
 
-    while(lo<hi) { // run until lo & hi cross
+    while( lo != hi ) { // run until lo & hi cross
 
-      //update mid pos var
+      int comparison = a[m].compareTo( target );
+      m = ( lo + hi ) / 2;//update mid pos var
 
-      // target found
+      if ( comparison == 0 )// target found
+        return m;
 
-      // value at mid index higher than target
+      else if ( comparison > 0 )// value at mid index higher than target
+        hi = m - 1;
 
-      // value at mid index lower than target
-
+      else if ( comparison < 0 )// value at mid index lower than target
+        lo = m + 1;
+        
     }
     return tPos;
   }//end binSearchIter
@@ -66,11 +78,13 @@ public class BinSearch
 
 
   //tell whether an array is sorted in ascending order
-  private static boolean isSorted( Comparable[] arr ) {
+  private static boolean isSorted( Comparable[] arr )
+  {
 
     boolean retBoo = true; //init to true, assume array is sorted
 
     //Q: Why would a FOREACH loop not suffice here?
+    //A: Because a FOREACH loop will only allow you to access arr[i], so you can't compare arr[i] to arr[i + 1].
     for( int i=0; i < arr.length-1; i++ ) {
       if ( ( arr[i].compareTo(arr[i+1]) > 0 ) ) {
         return false;
@@ -96,9 +110,9 @@ public class BinSearch
 
   //main method for testing
   //minimal -- augment as necessary
-  public static void main ( String[] args ) {
+  public static void main ( String[] args )
+  {
 
-    
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println("\nNow testing binSearch on Comparable array...");
     //Declare and initialize array of Comparables
@@ -113,7 +127,7 @@ public class BinSearch
     iArr3[i] = i * 2;
     }
     printArray( iArr3 );
-    System.out.println( "iArr3 sorted? -- " + isSorted(iArr2) );
+    System.out.println( "iArr3 sorted? -- " + isSorted(iArr3) );
     //search for 6 in array 
     System.out.println( binSearch(iArr2,2) );
     System.out.println( binSearch(iArr2,4) );
@@ -129,7 +143,6 @@ public class BinSearch
     System.out.println( binSearch(iArr3,5) );
     //search for 43 in array 
     System.out.println( binSearch(iArr3,43) );
-
 
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
