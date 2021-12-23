@@ -8,6 +8,7 @@
  * Disco- try litearlly tries things, and when it fails, it doesn;t break the whole program. 
  *
  * QCC- why not jsut keep the input a rational if we are going to make it a rational at some point anyways? idk
+ also i think the error message for compareto is not working?
  *
 */
 public class Rational{
@@ -91,8 +92,9 @@ public class Rational{
     if (!(r instanceof Rational)) {
       throw new ClassCastException("\ncompareTo() input not a Rational");
     }
-  if ( ( this.floatValue() - r.floatValue() ) != 0){
-    if ( ( this.floatValue() - r.floatValue() ) > 0){
+    Rational joe = (Rational)r;
+  if ( ( this.floatValue() - joe.floatValue() ) != 0){
+    if ( ( this.floatValue() - joe.floatValue() ) > 0){
       return 1;
     }
     return -1;
@@ -103,10 +105,11 @@ public class Rational{
  public boolean equals(Object r){
     if (!(r instanceof Rational)) { 
       return false; } // simply wont allow it
-   Rational r = (Rational)r; //make sure we working with rationals
-   r.reduce();
-   this.reduce;
-   return ((this.p == r.p) && (this.q == r.q));
+   Rational joe = (Rational)r; //make sure we working with rationals
+   joe.reduce();
+   this.reduce();
+   return ((this.numer == joe.denom) && (this.numer == joe.denom));
  }
+}
   
  
