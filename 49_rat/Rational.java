@@ -7,7 +7,7 @@
  *
  * Disco- try litearlly tries things, and when it fails, it doesn;t break the whole program. 
  *
- * QCC- ...
+ * QCC- why not jsut keep the input a rational if we are going to make it a rational at some point anyways? idk
  *
 */
 public class Rational{
