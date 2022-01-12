@@ -1,3 +1,10 @@
+/*
+Frog Hats -- Kevin Cheng, Abdullah Faruque, Jason Zhou
+APCS
+HW55: Never Fear, Big Oh Is Here!
+01-11-2021
+*/
+
 public class MySorts {
     public static void bubbleSort( ArrayList<Comparable> data )
     {
