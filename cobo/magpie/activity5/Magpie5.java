@@ -1,5 +1,15 @@
 import java.util.Random;
 
+/*
+Frog Hats -- Kevin Cheng, Abdullah Faruque, Jason Zhou
+APCS
+HW56: Turing Training Wheels
+01-12-2021
+disco- most of the work was using context clues (looking at the existing code, replicating it and altering it for your own needs)
+
+
+qcc- none atm
+*/
 /**
  * A program to carry on conversations with a human user.
  * This version:
