@@ -1,9 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// L05 -- pulling it together
-// 2022-02-03r
-// time spent:  hrs
-
+//Team stingRAY (Rin Furuoka, Abdullah Faruque, Yuki Feng)
+//APCS pd8
+//L05 -- pulling it together
+//2022-02-03
+//time spent: 1 hrs
 /***
  * class StatPrinterApp
  * driver for class StatPrinter
