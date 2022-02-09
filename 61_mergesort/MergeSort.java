@@ -1,8 +1,17 @@
+//Team duo Abdullah faruque, Prattay Dey
+//APCS pd8
+//HW61: Instructions so Simple...
+//2022-02-08
+//time spent: 0.5 hrs
+
 /***
   class MergeSort
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
+  sort your array using sort. Sort uses merge
+  Sort breaks up your list till its turned into tiny pieces that are size 1. Then we start merging which does the sorting part, giving us a sorted list. 
+ 
 
   ***/
 
@@ -15,14 +24,30 @@
      * Postcond: Input arrays unchanged, and
      * output array sorted in ascending order.
      ******************************************************/
-    private static int[] merge( int[] a, int[] b )
-    {
-   
-        
+    private static int[] merge( int[] a, int[] b ){
+      int[] c = new int[a.length + b.length];
+      int aCtr = 0;
+      int bCtr = 0;
+
+      for(int i = 0; i <c.length; i++){
+        if(aCtr >= a.length) {
+          c[i]=b[bCtr];
+          bCtr++;
+        } else if(bCtr >= b.length) {
+          c[i]=a[aCtr];
+          aCtr++;   //first two if statements are to check whether or not the counter is past the size. 
+                    // if it is past the size, we add the rest of the other array, cus ITS ALREADY sorted.
+      } else {
+        if(a[aCtr] < b[bCtr]){
+            c[i]=a[aCtr];
+            aCtr++;   
+          } else {
+            c[i]=b[bCtr];
+            bCtr++; 
+          }// adding process, knowing that the counter is less than the size of the list being worked with 
         }
-
-
-
+      }
+      return c;
     }//end merge()
   
   
@@ -31,9 +56,19 @@
      * Sorts input array using mergesort algorithm
      * Returns sorted version of input array (ascending)
      ******************************************************/
-    public static int[] sort( int[] arr )
-    {
-        
+    public static int[] sort( int[] arr ){
+     if (arr.length > 1){
+      int middle = arr.length / 2;
+      int[] a = new int[middle];
+      int[] b = new int[arr.length - middle];
+      for (int i = 0; i < a.length; i ++){
+        a[i] = arr [i];
+      }
+      for (int i = 0; i < b.length; i ++){
+        b[i] = arr[i + middle];
+      }
+      return merge(sort(a), sort(b)); //keeps breaking it up till the input arr is size 1.
+     } else {return arr;}
     }//end sort()
   
   
@@ -59,7 +94,7 @@
     //main method for testing
     public static void main( String [] args )
     {
-        /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
+        
         int[] arr0 = {0};
         int[] arr1 = {1};
         int[] arr2 = {1,2};
@@ -68,6 +103,8 @@
         int[] arr5 = {4,3,2,1};
         int[] arr6 = {9,42,17,63,0,512,23};
         int[] arr7 = {9,42,17,63,0,9,512,23,9};
+        int[] arr7 = {1,3,5,7,2,4,6,8,10};
+
   
         System.out.println("\nTesting mess-with-array method...");
         printArray( arr3 );
@@ -85,7 +122,8 @@
         printArray( sort( arr5 ) );
         printArray( sort( arr6 ) );
         printArray( sort( arr7 ) );
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        printArray( sort( arr8 ) );
+      
     }//end main()
   
   }//end class MergeSort
