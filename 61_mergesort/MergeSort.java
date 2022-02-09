@@ -103,7 +103,7 @@
         int[] arr5 = {4,3,2,1};
         int[] arr6 = {9,42,17,63,0,512,23};
         int[] arr7 = {9,42,17,63,0,9,512,23,9};
-        int[] arr7 = {1,3,5,7,2,4,6,8,10};
+        int[] arr8 = {1,3,5,7,2,4,6,8,10};
 
   
         System.out.println("\nTesting mess-with-array method...");
