@@ -1,0 +1,21 @@
+//Team stingRAY (Rin Furuoka, Abdullah Faruque, Yuki Feng)
+//APCS pd8
+//HW63: Read/Review/Expand
+//2022-02-10
+//time spent: 0.5 hrs
+
+Activity 1:
+  1a. public static double sentimentVal( String word )
+  1b. the parameter has to be a string
+  1c. it returns a double. 
+  2. sentimentVal("administration"); -> -0.02
+     sentimentVal("americans"); -> -0.94
+     sentimentVal("computer"); -> 0.15
+  3a. It is compilable as a string is passed through the method and a double
+  is returned. 
+
+  3b. It is not compilable. doubles don't go ghrough sentimentVal()
+  and the return type is not supposed to be a string.
+  3c. not compilable since there is more than one argument. 
+
+  
