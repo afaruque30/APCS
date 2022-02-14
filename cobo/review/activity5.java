@@ -1,3 +1,8 @@
+//TNPG stingRAY: Rin Fukuoka, Abdullah Faruque, Yuki Feng
+//APCS pd08
+//Lab06
+//02-10-22
+
 public class activity5{
 
     public  String joemama(String joe){
