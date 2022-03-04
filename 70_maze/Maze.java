@@ -1,11 +1,11 @@
-// Clyde Sinclair
-// APCS pd0
+// Team Fred - Andrey Sokolov + Geese, Tasnim Chowdury + MARY, Abdullah Faruque + Joemama
+// APCS pd8
 // HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+// 2022-03-03
+// time spent: 1hrs
 
 /***
- * SKEELTON for
+ * SKELETON for
  * class MazeSolver
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
@@ -15,12 +15,21 @@
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ * 1. Create function solveMaze that will be called recursively.
+ * 2. This function will start from any tile within the initialized board.
+ * 3. Checks if tile is the solution, if it is, end the program.
+ * 4. Mark current tile as visited.
+ * 5. Call function on squares directly adjacent vertically or horizontally to the square.
  *
  * DISCO
- * 
+ * Although the algorithm works, for some reason the HERO character doesn't want to show up on some of the visited squares. 
+ * I think it has to do with the iterative way solve is called, but I don't know how to fix it. 
+ *
  * QCC
- * 
+ * I wonder what would happen if the hero was put into an open room as opposed to a maze? 
+ * Is there a way to optimize the maze-solver, or is this the best way to solve a maze?
+ *
+ *
  ***/
 
 //enable file I/O
@@ -127,31 +136,43 @@ class MazeSolver
    **/
   public void solve( int x, int y )
   {
-    delay( FRAME_DELAY ); //slow it down enough to be followable
-
-    //primary base case
-    if ( ??? ) {
-	???
-    }
-    //other base cases
-    else if ( ??? ) {
-	???
+    try{
+      delay( FRAME_DELAY ); //slow it down enough to be followable
+      //primary base case - if you reached the end, mark the maze as solved
+      if ( _maze[y][x] == EXIT ) {
+        _maze[y][x] = HERO;
+        System.out.println("you found the exit!");
+        _solved = true;
+        System.exit(0);
+      }
+      //other base cases - you reached a dead end
+      else if ( _maze[y][x] == WALL || _maze[y][x] == VISITED_PATH) {
+        return;
+      }
+      //otherwise, recursively solve maze from next pos over,
+      //after marking current location
+      else if( _maze[y][x] == PATH) {
+        _maze[y][x] = HERO;
+        System.out.println( this ); //refresh screen
+        _maze[y][x] = VISITED_PATH;
+        int[] xOffset = {1, 0, -1, 0};
+        int[] yOffset = {0, -1, 0, 1};
+        for(int i = 0; i<=3; i++){
+          solve(x+xOffset[i], y+yOffset[i]);
+        }
+        _maze[y][x] = HERO;
+        System.out.println( this ); //refresh screen
+        _maze[y][x] = VISITED_PATH;
+        return;
+      }
+    } catch(ArrayIndexOutOfBoundsException e){
       return;
-    }
-    //otherwise, recursively solve maze from next pos over,
-    //after marking current location
-    else {
-	???
-      System.out.println( this ); //refresh screen
-
-???
-      System.out.println( this ); //refresh screen
     }
   }
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-      
+      return _maze[y][x] == PATH;
   }
 
 }//end class MazeSolver
@@ -181,12 +202,16 @@ public class Maze
     System.out.println( ms );
 
     //drop hero into the maze (coords must be on path)
-    // ThinkerTODO: comment next line out when ready to randomize startpos
-    ms.solve( 4, 3 );
-
+    //ms.solve( 3, 4 );
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    //ms.solve( startX, startY );
+    int startX = (int)(Math.random()*25);
+    int startY = (int)(Math.random()*80);
+    while(!(ms.onPath(startX, startY))){
+      startX = (int)(Math.random()*25);
+      startY = (int)(Math.random()*80);
+    }
+    ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
