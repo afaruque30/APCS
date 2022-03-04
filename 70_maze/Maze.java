@@ -9,8 +9,8 @@
  * class MazeSolver
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
- * 
- * USAGE: 
+ *
+ * USAGE:
  * $ java Maze [path/to/mazefile]
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
@@ -22,11 +22,11 @@
  * 5. Call function on squares directly adjacent vertically or horizontally to the square.
  *
  * DISCO
- * Although the algorithm works, for some reason the HERO character doesn't want to show up on some of the visited squares. 
- * I think it has to do with the iterative way solve is called, but I don't know how to fix it. 
+ * Although the algorithm works, for some reason the HERO character doesn't want to show up on some of the visited squares.
+ * I think it has to do with the iterative way solve is called, but I don't know how to fix it.
  *
  * QCC
- * I wonder what would happen if the hero was put into an open room as opposed to a maze? 
+ * I wonder what would happen if the hero was put into an open room as opposed to a maze?
  * Is there a way to optimize the maze-solver, or is this the best way to solve a maze?
  *
  *
@@ -136,7 +136,7 @@ class MazeSolver
    **/
   public void solve( int x, int y )
   {
-    try{
+
       delay( FRAME_DELAY ); //slow it down enough to be followable
       //primary base case - if you reached the end, mark the maze as solved
       if ( _maze[y][x] == EXIT ) {
@@ -154,7 +154,7 @@ class MazeSolver
       else if( _maze[y][x] == PATH) {
         _maze[y][x] = HERO;
         System.out.println( this ); //refresh screen
-        _maze[y][x] = VISITED_PATH;
+        _maze[y][x] = HERO; // spots that don't lead to dead ends are marked with @
         int[] xOffset = {1, 0, -1, 0};
         int[] yOffset = {0, -1, 0, 1};
         for(int i = 0; i<=3; i++){
@@ -165,9 +165,7 @@ class MazeSolver
         _maze[y][x] = VISITED_PATH;
         return;
       }
-    } catch(ArrayIndexOutOfBoundsException e){
-      return;
-    }
+
   }
 
   //accessor method to help with randomized drop-in location
