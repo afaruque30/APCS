@@ -23,10 +23,10 @@
  *
  * DISCO
  * Although the algorithm works, for some reason the HERO character doesn't want to show up on some of the visited squares.
- * I think it has to do with the iterative way solve is called, but I don't know how to fix it.
+ * We think it has to do with the iterative way solve is called, but we don't know how to fix it.
  *
  * QCC
- * I wonder what would happen if the hero was put into an open room as opposed to a maze?
+ * We wonder what would happen if the hero was put into an open room as opposed to a maze?
  * Is there a way to optimize the maze-solver, or is this the best way to solve a maze?
  *
  *
