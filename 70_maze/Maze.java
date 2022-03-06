@@ -1,7 +1,7 @@
 // Team Fred - Andrey Sokolov + Geese, Tasnim Chowdury + MARY, Abdullah Faruque + Joemama
 // APCS pd8
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03
+// HW70: Thinkers of the Corn
+// 2022-03-04
 // time spent: 1hrs
 
 /***
