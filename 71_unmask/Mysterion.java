@@ -33,9 +33,13 @@
  *             s+=1
  *     swap arr[b], arr[s] 
  * 
- * DISCO
+ * DISCO 
+ * value a, b, and c are the first, last, and "middle" value respectively, but c can be anything.
+ * the method iterates through the array. if an element is less than the value at c, then it is sent to the beginning
+ * of the array, where it would in a position behind c. 
+ * result: elements behind position c are less than the element at c. elements infront of position c are more than element at c.
  * 
- * QCC
+ * QCC - n/a
  * 
  * q0: What does it do?
  * a0:divides the array into two sections, the first section being less than the element at position c, the second
