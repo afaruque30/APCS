@@ -119,7 +119,21 @@ public class Mysterion
     return 1;
   }//end mysterion
 
+  public static int fastSelect(int[] arr, int k) {
+    int lo = 0;
+    int hi = arr.length - 1;
+    int pvtIndex = partition(arr, lo, hi, lo);
 
+    while (pvtIndex != k) {
+        if (pvtIndex < k) {
+            lo = pvtIndex + 1;
+        } else {
+            hi = pvtIndex - 1;
+        }
+        pvtIndex = partition(arr, lo, hi, lo);
+    }
+    return arr[pvtIndex - 1];
+}
   //main method for testing
   public static void main( String[] args )
   {
