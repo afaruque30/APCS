@@ -2,7 +2,12 @@
 // APCS pd8
 // HW76: We Got a Little Ol' Convoy
 // 2022-03-14
-// time spent: 0.5 hrs
+// time spent: 1.1 hrs
+
+/***
+ * class LList
+ * Implements a linked list of LLNodes, each containing String data
+ **/
 
 public class LList implements List //interface def must be in this dir
 {
@@ -14,7 +19,8 @@ public class LList implements List //interface def must be in this dir
   // constructor -- initializes instance vars
   public LList( )
   {
-    // YOUR CODE HERE
+    _head = new LLNode(null, null);
+    _size = size();
   }
 
 
@@ -22,7 +28,18 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    // YOUR CODE HERE
+    if (_head == null) {
+      _head = new LLNode(newVal, null);;
+    }
+    else {
+      LLNode tmp = _head;
+      while (tmp.getNext() != null) {
+        tmp = tmp.getNext();
+      }
+      tmp.setNext(new LLNode(newVal, null));
+    }
+    _size++;
+    return true;
   }
 
 
@@ -31,7 +48,12 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    // YOUR CODE HERE
+    LLNode tmp = _head;
+    for (int i = 0; i < index; i++){
+      tmp = tmp.getNext();
+    }
+
+    return tmp.getCargo();
   }
 
 
@@ -41,14 +63,19 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    // YOUR CODE HERE
+    LLNode tmp = _head;
+    for (int i = 0; i < index; i++){
+      tmp = tmp.getNext();
+    }
+
+    return tmp.setCargo(newVal);
   }
 
 
   //return number of nodes in list
   public int size()
   {
-    // YOUR CODE HERE
+    return _size;
   }
 
   //--------------^  List interface methods  ^--------------
@@ -58,42 +85,41 @@ public class LList implements List //interface def must be in this dir
   // override inherited toString
   public String toString()
   {
-    // YOUR CODE HERE
+    String result = "[";
+    LLNode tmp = _head;
+    while (tmp != null) {
+      result += tmp.getCargo() + ",";
+      tmp = tmp.getNext();
+    }
+    result = result.substring(0,result.length()-1) + "]";
+    return result;
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    LList james = new LList();
 
+    LList james = new LList();
     System.out.println( james );
     System.out.println( "size: " + james.size() );
-
     james.add("beat");
     System.out.println( james );
     System.out.println( "size: " + james.size() );
-
     james.add("a");
     System.out.println( james );
     System.out.println( "size: " + james.size() );
-
     james.add("need");
     System.out.println( james );
     System.out.println( "size: " + james.size() );
-
     james.add("I");
     System.out.println( james );
     System.out.println( "size: " + james.size() );
-
     System.out.println( "2nd item is: " + james.get(1) );
-
     james.set( 1, "got" );
     System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
-
     System.out.println( james );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
   }
 
 }//end class LList
