@@ -118,7 +118,7 @@ public class LList implements List // interface def must be in this dir
                 tmp = tmp.getNext();
             }
             tmp.setNext(new LLNode(newval, tmp.getNext()));
-            size++;
+            _size++;
         }
     }
 
