@@ -4,7 +4,7 @@
 //2022-04-13W
 //time spent: 0.5 hours
 
-public class Deque<T> {
+public interface Deque<T> {
 
     public boolean add(T x);  
 
