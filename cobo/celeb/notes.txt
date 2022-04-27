@@ -1,0 +1,62 @@
+A Dog's Dream (David Chen + Daniel Jung + Abdullah Faraque)
+APCS pd8
+L09: Some Folks Call It A Charades
+2022-04-27
+time spent: 4 hour
+
+DISCO
+GUI's are very weird.
+
+QCC
+How many celebs?
+Should we create our own classes or follow the lab?
+Are the classes outlined in the lab enough to make the game work properly?
+
+activity 1
+
+1. have a game class that stores info and a celebrity class that stores the information of such celebrity.
+
+2. list of celebrities, score, the chosen celebrity your're supposed to guess
+
+3. initialize() initializes the game. scorePoint() increments score by one. discard() takes the top celebrity off the deck.
+
+4. we make the above methods a thing
+
+5. wip
+
+6. wip
+
+7. 
+
+activity 2
+
+1. To initialize instance variables
+
+2. public <CLASSNAME>(<ARGS>)
+
+3. String _name, String _clue
+
+4. getName(), getClue(), setName(String newName), setClue(String newClue), isCorrect(String checkName)
+   
+7. The second constructor doesn't take arguments, setting the clue and answers to the dafualt value
+
+
+
+
+activity 3
+
+1.
+
+2. private ArrayList<Celebrity> celebGameList;
+
+3. private
+
+12. celebrityGame
+
+13. nothing
+
+
+
+ACTIVITY 4 
+
+wip D:
